@@ -14,6 +14,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import logo from "@/assets/logo.png";
+
 
 export function SiteNav() {
   const cart = useCart();
@@ -42,10 +44,11 @@ export function SiteNav() {
   return (
     <header className="fixed top-0 inset-x-0 z-40 border-b border-border/40 backdrop-blur-xl bg-background/60">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary-glow shadow-[var(--shadow-glow)] grid place-items-center">
-            <Sparkles className="size-4 text-primary-foreground" />
-          </div>
+        <Link to="/" className="flex items-center gap-1">
+          
+            {/* <Sparkles className="size-4 text-primary-foreground" /> */}
+            <img src={logo} alt="CoreHex Rental" className="size-12 rounded-lg" />
+          
           <span className="font-display font-semibold tracking-tight">CoreHex Rental</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
